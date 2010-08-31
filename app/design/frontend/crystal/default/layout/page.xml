@@ -109,7 +109,10 @@ Default layout, loads most of the pages
         <block type="core/profiler" output="toHtml" name="core_profiler"/>
 
         <reference name="top.links">
-            <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
+            <action method="addLink" translate="label title" module="page"><label>Main Page</label><url/><title>Main Page</title><prepare/><urlParams/><position>10</position></action>
+            <action method="addLink" translate="label title" module="page"><label>About Us</label><url>about-company.html</url><title>About Us</title><prepare/><urlParams/><position>10</position></action>
+            <action method="addLink" translate="label title" module="page"><label>Catalogue</label><url>#</url><title>Catalogue</title><prepare/><urlParams/><position>10</position></action>
+            <action method="addLink" translate="label title" module="page"><label>Contacts</label><url>contacts.html</url><title>Contacts</title><prepare/><urlParams/><position>10</position></action>
         </reference>
     </default>
 
