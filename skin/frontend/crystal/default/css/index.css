@@ -13,6 +13,7 @@ BODY {
     position: relative;
     padding-top: 116px;
     padding-bottom: 20px;
+    height: 39px;
 }
 
 #header .logo {
@@ -31,8 +32,7 @@ BODY {
     border: 1px solid #a22a5a;
     background: #9b1a4d;
     height: 7px;
-    margin-left: 3px;
-    _width: 815px;
+    _width: 818px;
     _overflow: hidden;
 }
 
@@ -44,6 +44,8 @@ BODY {
 }
 
 #header .menu {
+    position: absolute;
+    width: 600px;
     padding: 10px 0 0 198px;
     _padding-left: 218px;
 }
@@ -81,15 +83,15 @@ BODY {
     position: relative;
     font-size: 11px;
     float: left;
-    min-height: 400px;
-    _height: 400px;
+    min-height: 660px;
+    _height: 660px;
 }
 
 #menu {
     position: absolute;
     left: -190px;
     border-left: 2px solid #9b1a4d;
-    padding-left: 12px;
+    padding-left: 9px;
 }
 
 #menu a {
@@ -98,13 +100,24 @@ BODY {
     line-height: 20px;
     text-decoration: none;
     color: #838280;
+    padding-left: 7px;
+}
+
+#menu a.main {
+    padding-left: 0px;
+    color: #000;
+}
+
+#menu a.main.active,
+#menu a.main:hover {
+    padding-left: 15px;
 }
 
 #menu a.active,
 #menu a:hover {
     color: #9c1d50;
-    margin-left: -18px;
-    padding-left: 18px;
+    margin-left: -15px;
+    padding-left: 22px;
     background: url('img/point.gif') 0 8px no-repeat;
 }
 
@@ -116,6 +129,7 @@ BODY {
 .catalog {
     float: left;
     margin-right: -20px;
+    padding-left: 20px;
 }
 
 .catalog a.item {
@@ -124,7 +138,7 @@ BODY {
     width: 150px;
     height: 150px;
     padding: 10px;
-    margin: 15px 20px;
+    margin: 15px;
     border: 2px solid #a19c9d;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
