@@ -1,0 +1,28 @@
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+?>
+
+
+    <?php// echo $this->getToolbarHtml() ?>
+    <?php  // List mode ?>
+    <?php $_iterator = 0; ?>
+    <?php foreach ($_productCollection as $_product): ?>
+           
+        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="item">
+            <div class="img"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="150" height="130" /></div>
+            <span class="name"><?php echo $this->stripTags($_product->getName(), null, true) ?></span>
+            <span class="code"><?php echo $_product->getCode(); ?></span>
+        </a>
+    <?php endforeach; ?>
+
+    <div class="toolbar-bottom">
+        <?php// echo $this->getToolbarHtml() ?>
+    </div>
