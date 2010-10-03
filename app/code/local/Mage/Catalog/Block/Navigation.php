@@ -191,46 +191,14 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
 
         // prepare list item html classes
         $classes = array();
-        $classes[] = 'level' . $level;
-        $classes[] = 'nav-' . $this->_getItemPosition($level);
         $linkClass = '';
-        if ($isOutermost && $outermostItemClass) {
-            $classes[] = $outermostItemClass;
-            $linkClass = ' class="'.$outermostItemClass.'"';
-        }
-        if ($this->isCategoryActive($category)) {
-            $classes[] = 'active';
-        }
-        if ($isFirst) {
-            $classes[] = 'first';
-        }
-        if ($isLast) {
-            $classes[] = 'last';
-        }
+
         if ($hasActiveChildren) {
-            $classes[] = 'parent';
+            $linkClass = 'class="main"';
         }
-
-        // prepare list item attributes
-        $attributes = array();
-        if (count($classes) > 0) {
-            $attributes['class'] = implode(' ', $classes);
-        }
-        if ($hasActiveChildren && !$noEventAttributes) {
-             $attributes['onmouseover'] = 'toggleMenu(this,1)';
-             $attributes['onmouseout'] = 'toggleMenu(this,0)';
-        }
-
-        // assemble list item with attributes
-        $htmlLi = '<li';
-        foreach ($attributes as $attrName => $attrValue) {
-            $htmlLi .= ' ' . $attrName . '="' . str_replace('"', '\"', $attrValue) . '"';
-        }
-        $htmlLi .= '>';
-        $html[] = $htmlLi;
 
         $html[] = '<a href="'.$this->getCategoryUrl($category).'"'.$linkClass.'>';
-        $html[] = '<span>' . $this->escapeHtml($category->getName()) . '</span>';
+        $html[] = $this->escapeHtml($category->getName());
         $html[] = '</a>';
 
         // render children
@@ -250,18 +218,8 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
             $j++;
         }
         if (!empty($htmlChildren)) {
-            if ($childrenWrapClass) {
-                $html[] = '<div class="' . $childrenWrapClass . '">';
-            }
-            $html[] = '<ul class="level' . $level . '">';
             $html[] = $htmlChildren;
-            $html[] = '</ul>';
-            if ($childrenWrapClass) {
-                $html[] = '</div>';
-            }
         }
-
-        $html[] = '</li>';
 
         $html = implode("\n", $html);
         return $html;
