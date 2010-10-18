@@ -1,0 +1,36 @@
+<?php
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+
+
+<div class="gallery">
+    <?php if (count($this->getGalleryImages()) > 0): ?>
+        <?php foreach ($this->getGalleryImages() as $_image): ?>
+                <img <?php if ($_image->getPosition()!=1):?>style="display: none;"<?php endif;?> src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(450); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <div class="thumbs">
+        <?php if (count($this->getGalleryImages()) > 1): ?>
+            <?php foreach ($this->getGalleryImages() as $_image): ?>
+                    <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(100); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+   <script>
+        $(document).ready(function() {
+            var $main = $('.gallery img:first');
+            $('.thumbs img')
+                .mouseover(function(){
+                    $main.attr('src', $(this).attr('src').replace('thumbnail', 'image').replace('100x', '450x'));
+                });
+        });
+    </script>
+</div>

@@ -126,6 +126,12 @@ BODY {
     _padding-left: 40px;
 }
 
+.breadcrumb h1 {
+    color: #993366;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
 .catalog {
     float: left;
     margin-right: -20px;

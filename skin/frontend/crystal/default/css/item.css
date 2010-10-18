@@ -1,0 +1,66 @@
+#item {
+    margin-left: 20px; 
+    _margin-left: 40px;
+}
+
+#item h1 {
+    color: #993366;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+#item h3 {
+    font-weight: 100;
+    color: #993366;
+    font-size: 13px;
+}
+
+#item .gallery {
+    position: relative;
+    height: 450px;
+}
+
+#item .gallery .thumbs {
+    position: absolute;
+    left: 420px;
+    top: 0px;
+}
+
+#item .gallery .thumbs img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#item p {
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+}
+
+#item p span {
+    display: inline-block;
+    position: absolute;
+    left: 420px;
+    top: 0px;
+}
+#item p span b {
+    font-size: 20px;
+}
+
+#item .description {
+    width: 520px;
+}
+
+#item .catalog {
+    width: 600px;
+}
+
+#item .catalog a.item {
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+}
+
+#item .catalog a.item img {
+    _width: 100px;
+}

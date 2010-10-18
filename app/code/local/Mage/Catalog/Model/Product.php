@@ -178,6 +178,11 @@ class Mage_Catalog_Model_Product extends Mage_Catalog_Model_Abstract
         return $this->_getData('name');
     }
 
+    public function getCode()
+    {
+        return $this->_getData('code');
+    }
+
     /**
      * Get product price throught type instance
      *

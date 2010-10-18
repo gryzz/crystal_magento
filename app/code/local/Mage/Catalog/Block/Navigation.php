@@ -8,6 +8,8 @@
  */
 class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
 {
+    const MAIN_MENU_LEVEL = 0;
+
     protected $_categoryInstance = null;
 
     /**
@@ -193,7 +195,7 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
         $classes = array();
         $linkClass = '';
 
-        if ($hasActiveChildren) {
+        if ($level == self::MAIN_MENU_LEVEL) {
             $linkClass = 'class="main"';
         }
 

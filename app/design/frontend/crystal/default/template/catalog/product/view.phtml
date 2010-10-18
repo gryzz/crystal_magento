@@ -1,0 +1,14 @@
+<?php
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+?>
+<div id="item">
+    <?php echo $this->getChildHtml('media') ?>
+    <p>
+       <br /><span>Код товару:<br/><b><?=$_product->getCode();?></b></span>
+    </p>
+    <div class="description">
+        <h3>Пара слів про товар:</h3>
+        <p><?=nl2br($_product->getDescription()); ?></p>
+   </div>    
+</div>
