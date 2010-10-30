@@ -2,7 +2,7 @@
 <span>
      <?php foreach ($this->getStores() as $_lang): ?>
         <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? ' class="active"' : '' ?>
-        <a href="<?php echo $_lang->getCurrentUrl() ?>"<?php echo $_selected ?>><?php echo $this->htmlEscape($_lang->getName()) ?></a>
+        <a href="<?php echo $_lang->getCurrentUrl(false) ?>"<?php echo $_selected ?>><?php echo $this->htmlEscape($_lang->getName()) ?></a>
     <?php endforeach; ?>
 </span>
 <?php endif; ?>
