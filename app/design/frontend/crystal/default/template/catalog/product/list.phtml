@@ -10,10 +10,10 @@
     $_helper = $this->helper('catalog/output');
 ?>
 
+<?php echo $this->getToolbarHtml() ?>
 <div class="catalog">
 
-    <?php// echo $this->getToolbarHtml() ?>
-    <?php  // List mode ?>
+    
     <?php $_iterator = 0; ?>
     <?php foreach ($_productCollection as $_product): ?>
            
@@ -23,9 +23,6 @@
             <span class="code"><?php echo $_product->getCode(); ?></span>
         </a>
     <?php endforeach; ?>
-
-    <div class="toolbar-bottom">
-        <?php// echo $this->getToolbarHtml() ?>
-    </div>
-
 </div>
+
+<?php echo $this->getToolbarHtml() ?>
