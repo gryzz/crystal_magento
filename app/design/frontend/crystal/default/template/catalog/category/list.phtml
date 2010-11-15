@@ -1,20 +1,16 @@
+<?php $catCount = 0;?>
+<?php $catCountMax = 9;?>
+<div class="catalog">
 <?php foreach ($this->getStoreCategories() as $_category): ?>
-<?php $open = $this->isCategoryActive($_category); ?>
-<?php
-$cur_category=Mage::getModel('catalog/category')->load($_category->getId());
-$layer = Mage::getSingleton('catalog/layer');
-$layer->setCurrentCategory($cur_category);
+<?php if ($catCount == $catCountMax) break;?>
+<?php $catCount++;
+      $cur_category=Mage::getModel('catalog/category')->load($_category->getId());
+      $layer = Mage::getSingleton('catalog/layer');
+      $layer->setCurrentCategory($cur_category);
 ?>
-
-<div style="float: left; padding-right: 30px; text-align: center;">
-                <div class="linkimage">
-                    <p>
-                    <a href="<?php echo $this->getCategoryUrl($_category)?>">
-                    <?php echo $_category->getName()?>
-                    </a>
-                    </p>
-                </div>
+        <a href="<?php echo $this->getCategoryUrl($_category)?>" class="item">
+            <div class="img"><img src="<?php echo $cur_category->getResizedImage();?>" width="150" height="130" /></div>
+            <span class="name"><?php echo $_category->getName();?></span>
+        </a>
+<?php endforeach; ?>
 </div>
-
-<?php endif; ?>
-<?php endforeach; ?> 
