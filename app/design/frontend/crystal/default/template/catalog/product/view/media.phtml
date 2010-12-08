@@ -13,7 +13,7 @@
 
 <div class="gallery">
     <?php if (count($this->getGalleryImages()) > 0): ?>
-        <?php foreach ($this->getGalleryImages() as $_image): print_r($_image);?>
+        <?php foreach ($this->getGalleryImages() as $_image): ?>
                 <img 
                     <?php if ($_image->getPosition()!=1):?>style="display: none;"<?php endif;?>
                     src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(400); ?>"
