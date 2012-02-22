@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="item.css"/>
+    <script src="js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <img class="logo" src="img/logo.gif" width="261" height="111"/>
+            <img class="slogan" src="img/slogan.gif" width="270" height="25"/>
+            <div class="line"></div>
+            <img class="bowl" src="img/bowl.gif" width="204" height="235"/>
+            <div class="menu">            
+                <a class="active" href="#">головна</a>
+                <a href="#">про компанію</a>
+                <a href="#">каталог</a>
+                <a href="#">контакти</a>
+                <span>
+                    <a class="active" href="#">ua</a>
+                    <a href="#">ru</a>
+                </span>
+            </div>
+        </div>
+        <div id="content">
+            <div id="menu">
+                <a href="#" class="active">KIELISZKI</a>
+                <a href="#">KOLEKCJA NOWOCZESNA</a>
+                <a href="#">KOMPLETY</a>
+                <a href="#">SZKLANKI</a>
+                <a href="#">UPOMINKI, GADŻETY</a>
+                <a href="#">Karafki & dzbanki</a>
+                <a href="#">Kryształ ze srebrem</a>
+                <a href="#">Wazony</a>
+                <a href="#">Owocarki</a>
+                <a href="#">Bomboniery</a>
+                <a href="#">Świeczniki & lampy</a>
+                <a href="#">Tace & tortownice & talerze</a>
+                <a href="#">DEWOCJONALIA, RELIGIJNE</a>
+                <a href="#">Prezenty okolicznościowe</a>
+                <a href="#">Kolekcja kolorowa</a>
+                <a href="#">Kryształ z mosiądzem</a>
+                <a href="#">Inne</a>
+            </div>
+            <div class="breadcrumb">
+                каталог / 
+                <b>KIELISZKI</b>
+            </div>
+            <div id="item">
+                <h1>Келихи під вино</h1>
+                <div class="gallery">
+                    <img src="img/items/9853/1_middle.jpg" />
+                    <img style="display: none;" src="img/items/9853/2_middle.jpg" />
+                    <img style="display: none;" src="img/items/9853/3_middle.jpg" />
+                    <img style="display: none;" src="img/items/9853/4_middle.jpg" />
+                    <div class="thumbs">
+                        <img src="img/items/9853/1_small.jpg" />
+                        <img src="img/items/9853/2_small.jpg" />
+                        <img src="img/items/9853/3_small.jpg" />
+                        <img src="img/items/9853/4_small.jpg" />
+                        <!--<img src="img/items/9853/5_small.jpg" />
+                        <img src="img/items/9853/6_small.jpg" />-->
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            var $main = $('.gallery img:first');
+                            $('.thumbs img')
+                                .mouseover(function(){
+                                    $main.attr('src', $(this).attr('src').replace('small', 'middle'));
+                                });
+                        });
+                    </script>
+                </div>
+                <p>
+                    Набір з 6 штук. Об&#39;єм 50мл. Подарункове пакування.<br/>
+                    Розмір коробки 15х30см., вага &mdash; 300гр.
+                    <span>Код товару:<br/><b>9853</b></span>
+                </p>
+                <div class="description">
+                    <h3>Пара слів про товар:</h3>
+                    <p>Багато декоровані фужери вже давно стали надбанням історії разом з сервантами, килимами з оленями на стінах і іншими атрибутами минулої розкоші. На зміну їм прийшли келихи з тонкого прозорого скла бездоганної форми. Вони покликані підкреслити колір вина і його чистоту.</p>
+                   <p>Правильно підібрана до вина форма келиху допомагає повною мірою розкрити всю багатогранність його букета.</p>
+                   <p>Цінителі підбирають “правильні” келихи для кожного вина - залежно від сорту винограду, з якого воно зроблене, витримки, фортеці, тому келихів багато не буває, проте, дотримуючись певних правил можна обійтися і мінімальним “джентльменським набором”</p>
+               </div>
+            <h3>З цим товаром також замовляють:</h3>
+            <div class="catalog">
+                <a href="#" class="item">
+                    <div class="img"><img src="img/items/test.jpg" width="150" height="130" /></div>
+                    <span class="name">Long item name</span>
+                    <span class="code">code</span>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="img"><img src="img/items/test.jpg" width="150" height="130" /></div>
+                    <span class="name">Long item name</span>
+                    <span class="code">code</span>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="img"><img src="img/items/test.jpg" width="150" height="130" /></div>
+                    <span class="name">Long item name</span>
+                    <span class="code">code</span>
+                </a>
+
+                <a href="#" class="item">
+                    <div class="img"><img src="img/items/test.jpg" width="150" height="130" /></div>
+                    <span class="name">Long item name</span>
+                    <span class="code">code</span>
+                </a>
+            </div>
+
+            </div>
+        </div>
+        <div id="footer">
+            <div class="line"></div>
+            <img class="cherry" src="img/cherry.gif" width="94" height="60" />
+            <span class="bottomMenu">
+                <a href="#">головна</a> |
+                <a href="#">про компанію</a> |
+                <a href="#">каталог</a> |
+                <a href="#">контакти</a><br/>
+                Copyright &copy; Crystal
+            </span>
+            <span class="location">
+                <b>м. Львів, вул. Б. Хмельницького 106</b><br/>
+                (0322) 52-11-24, 067-255-23-23 менеджер з продажу 
+            </span>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

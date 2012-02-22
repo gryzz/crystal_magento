@@ -5,7 +5,7 @@
 <div id="item">
     <?php echo $this->getChildHtml('media') ?>
     <p>
-       <br /><span>Код товару:<br/><b><?=$_product->getCode();?></b></span>
+       <br /><span>Код товару:<br/><b><?if (!$_product->getProductCode()){ echo $_product->getProductPlCode();} else {echo $_product->getProductCode();}?></b></span>
     </p>
     <div class="description">
         <h3>Пара слів про товар:</h3>

@@ -14,7 +14,7 @@
 <div class="gallery">
     <?php if (count($this->getGalleryImages()) > 0): ?>
         <?php foreach ($this->getGalleryImages() as $_image): ?>
-                <img 
+                <img <?php if ($_image->getPosition()==1):?>id="main_image"<?php endif;?>
                     <?php if ($_image->getPosition()!=1):?>style="display: none;"<?php endif;?>
                     src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(400); ?>"
                     alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>"
@@ -25,17 +25,20 @@
     <div class="thumbs">
         <?php if (count($this->getGalleryImages()) > 1): ?>
             <?php foreach ($this->getGalleryImages() as $_image): ?>
-                    <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(100); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
+                    <img 
+                        src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(100); ?>"
+                        alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>"
+                        onMouseOver="change_image('<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(400); ?>', '<?php echo $this->htmlEscape($_image->getLabel()) ?>')"
+                    />
             <?php endforeach; ?>
         <?php endif; ?>
     </div>
    <script>
-        $(document).ready(function() {
-            var $main = $('.gallery img:first');
-            $('.thumbs img')
-                .mouseover(function(){
-                    $main.attr('src', $(this).attr('src').replace('thumbnail', 'image').replace('100x', '400x'));
-                });
-        });
+        $j = jQuery.noConflict();
+
+        function change_image(image, alt) {
+            $j('#main_image').attr('src', image);
+            $j('#main_image').attr('alt', alt);
+        }
     </script>
 </div>

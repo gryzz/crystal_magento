@@ -4,12 +4,12 @@ BODY {
 }
 
 #page {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
 }
 
 #header {
-    _width: 800px;
+    _width: 1000px;
     position: relative;
     padding-top: 116px;
     padding-bottom: 20px;
@@ -24,28 +24,30 @@ BODY {
 
 #header .slogan {
     position: absolute;
-    left: 280px;
+    left: 330px;
     top: 90px;
+    font: italic lighter 18px Georgia, times, serif;
+    color: #868583;
 }
 
 #header .line {
     border: 1px solid #a22a5a;
     background: #9b1a4d;
     height: 7px;
-    _width: 818px;
+    _width: 1018px;
     _overflow: hidden;
 }
 
 #header .bowl {
     position: absolute;
     top: -27px;
-    right: 20px;
-    _right: 30px;
+    right: 50px;
+    _right: 60px;
 }
 
 #header .menu {
     position: absolute;
-    width: 600px;
+    width: 800px;
     padding: 10px 0 0 198px;
     _padding-left: 218px;
 }
@@ -132,12 +134,20 @@ BODY {
     font-size: 20px;
 }
 
+.rightBanner {
+    width: 150px;
+    border: 1px solid #000;
+    height: 400px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
 .catalog {
     float: left;
-    margin-right: -20px;
+    margin-right: 145px;
     padding-left: 20px;
-    min-width: 620px;
-    _width: 620px;
+    width: 657px
 }
 
 .catalog a.item {
@@ -227,7 +237,7 @@ img {
     height: 7px;
     margin: 20px 0px 20px 7px;
     _margin-right: 0px;
-    _width: 812px;
+    _width: 1012px;
     _overflow: hidden;
 }
 
@@ -246,5 +256,6 @@ img {
 }
 
 .pages {
-    float: right;
+    float: left;
+    padding-left: 30px;
 }
